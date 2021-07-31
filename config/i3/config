@@ -4,7 +4,8 @@ set $mod Mod4
 for_window [class=".*"] border pixel 0
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+#font pango:monospace 8
+font pango:Hack 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -186,9 +187,9 @@ bindsym $mod+l exec i3lock-fancy -p -- scrot -z
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
 
 #Wallpaper:
 exec_always feh --bg-scale /root/Pictures/4ada3ee16f32e657fc0ea0e4e819ece4.jpg
@@ -196,6 +197,8 @@ exec_always feh --bg-scale /root/Pictures/4ada3ee16f32e657fc0ea0e4e819ece4.jpg
 exec_always setxkbmap -layout us,ru -variant dvorak,
 #Run compton compositor
 exec_always compton  --config /root/.config/compton/compton.conf
+#polybar
+exec_always polybar main
 
 #gaps control
 bindsym $mod+f			gaps inner current plus 5
